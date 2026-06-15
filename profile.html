@@ -3,16 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Retro Video Game Quiz</title>
+    <title>Retro Video Game Quiz | Profile</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="profile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <nav><h1>Retro Video Game Quiz</h1></nav>
+    <header>
+      <h1>Profile</h1>
+    </header>
+
     <main>
-      <section>
+      <section aria-labelledby="profile-heading">
         <div class="profile">
-          <div class="profile-pic">
+          <div class="profile-pic" aria-hidden="true">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -27,43 +36,74 @@
               <circle cx="12" cy="7" r="4" />
             </svg>
           </div>
-          <path
-            xmlns="http://www.w3.org/2000/svg"
-            d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"
-          />
-          <circle xmlns="http://www.w3.org/2000/svg" cx="12" cy="7" r="4" />
-          <h2>Max Doe</h2>
+          <h2 id="profile-heading">Max Doe</h2>
         </div>
+
         <div class="profile-about">
           <h3>About Me</h3>
-          <p>About me paragraph</p>
+          <p>
+            Here is a closer description of the player that should be editable
+            and have a maximum of three lines in total.
+          </p>
         </div>
       </section>
-      <section>
+
+      <section aria-label="Statistics">
         <div class="profile-counters">
-          <span>SVG Question 12</span>
-          <span>Bookmarked 4</span>
+          <span class="profile-counters-container">
+            <img
+              src="/mobile-quiz/assets/question.png"
+              alt="Answered questions:"
+            />
+            <span>12</span>
+          </span>
+          <span class="profile-counters-container">
+            <img
+              src="/mobile-quiz/assets/heart-unselect2.png"
+              alt="Saved favorites:"
+            />
+            <span>4</span>
+          </span>
         </div>
       </section>
-      <section>
+
+      <section aria-labelledby="settings-heading">
         <div class="profile-settings">
-          <h3>Settings</h3>
+          <h3 id="settings-heading">Settings</h3>
           <div class="dark-mode">
-            <h3>Dark Mode</h3>
+            <h4 id="dark-mode-label">Dark Mode</h4>
             <label class="switch">
-              <input type="checkbox" />
+              <input type="checkbox" aria-labelledby="dark-mode-label" />
               <span class="slider"></span>
             </label>
           </div>
         </div>
       </section>
     </main>
+
     <footer>
-      <ul class="footer">
-        <li><a href="index.html">home</a></li>
-        <li><a href="bookmark.html">Bookmarked</a></li>
-        <li><a href="profile.html">Profile</a></li>
-      </ul>
+      <nav aria-label="Main navigation">
+        <ul class="footer">
+          <li>
+            <a href="index.html">
+              <img src="/mobile-quiz/assets/gambling.png" alt="Start quiz" />
+            </a>
+          </li>
+          <li>
+            <a href="bookmark.html">
+              <img src="/mobile-quiz/assets/heart-main.png" alt="Favorites" />
+            </a>
+          </li>
+          <li class="current">
+            <a href="profile.html" aria-current="page">
+              <img
+                src="/mobile-quiz/assets/dancing.png"
+                alt="Profile (Current page)"
+              />
+            </a>
+          </li>
+        </ul>
+      </nav>
     </footer>
   </body>
 </html>
