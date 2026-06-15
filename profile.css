@@ -1,0 +1,130 @@
+@import "/mobile-quiz/global.css";
+
+section {
+  width: 90%;
+  margin: 0 var(--margin-autocenter);
+}
+
+/*--- PROFILE PIC & NAME ---*/
+
+.profile {
+  display: var(--display-flex);
+  justify-content: space-around;
+  margin: 2rem auto;
+  border: 1px solid black;
+}
+
+.profile-pic {
+  background-color: #2196f3;
+  border-radius: 50%;
+}
+
+.profile svg {
+  padding: 1rem;
+  width: 3rem;
+  height: 3rem;
+  fill: red;
+}
+
+/*--- PROFILE ABOUT ---*/
+
+.profile-about {
+  display: var(--display-flex);
+  background-color: #2196f3;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.profile-about h2 {
+  text-align: left !important;
+}
+
+.profile-about p {
+  margin-top: 0;
+}
+
+/*--- PROFILE COUNTERS ---*/
+
+.profile-counters {
+  display: var(--display-flex);
+  background-color: gold;
+  justify-content: space-around;
+  margin: 1.5rem 0;
+}
+
+.profile-counters span {
+  border: 1px dashed black;
+  padding: 0.5rem 1rem;
+}
+
+/*--- PROFILE SETTINGS ---*/
+
+.profile-settings {
+  display: var(--display-flex);
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.dark-mode {
+  display: var(--display-flex);
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
