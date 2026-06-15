@@ -10,34 +10,29 @@ section {
 .profile {
   display: var(--display-flex);
   justify-content: space-around;
-  margin: 2rem auto;
-  border: 1px solid black;
+  align-items: center;
+  margin: 2rem auto 0;
 }
 
 .profile-pic {
-  background-color: #2196f3;
-  border-radius: 50%;
+  background-color: var(--color-card-bg);
+  border: 0.15rem dashed var(--color-text-secondary);
 }
 
 .profile svg {
   padding: 1rem;
-  width: 3rem;
-  height: 3rem;
-  fill: red;
+  width: 5rem;
+  height: 5rem;
 }
 
 /*--- PROFILE ABOUT ---*/
 
 .profile-about {
   display: var(--display-flex);
-  background-color: #2196f3;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-}
-
-.profile-about h2 {
-  text-align: left !important;
+  margin: 1rem 0 2rem;
 }
 
 .profile-about p {
@@ -48,14 +43,23 @@ section {
 
 .profile-counters {
   display: var(--display-flex);
-  background-color: gold;
   justify-content: space-around;
   margin: 1.5rem 0;
 }
 
 .profile-counters span {
-  border: 1px dashed black;
+  display: var(--display-flex);
+  align-items: center;
+  gap: 0.5rem;
   padding: 0.5rem 1rem;
+}
+
+.profile-counters-container {
+  border: 0.15rem dashed var(--color-text-secondary);
+}
+
+.profile-counters img {
+  width: 2rem;
 }
 
 /*--- PROFILE SETTINGS ---*/
@@ -75,7 +79,13 @@ section {
   width: 100%;
 }
 
-/* The switch - the box around the slider */
+.profile-about h3,
+.profile-settings h3 {
+  margin: 1rem 0;
+}
+
+/*---DARKMODE SLIDER---*/
+
 .switch {
   position: relative;
   display: inline-block;
@@ -83,14 +93,12 @@ section {
   height: 34px;
 }
 
-/* Hide default HTML checkbox */
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* The slider */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -98,7 +106,8 @@ section {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: var(--color-card-bg);
+  border: 0.15rem dashed var(--color-text-secondary);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -106,11 +115,12 @@ section {
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: 1.5rem;
+  width: 1.5rem;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  top: 4px;
+  background-color: var(--color-text-secondary);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }

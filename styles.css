@@ -2,10 +2,16 @@
 @import "/mobile-quiz/profile.css";
 
 body {
-  min-height: 100vh;
+  min-height: 50vh;
   max-width: 390px;
-  border: 1px solid red;
-  margin: 0 var(--margin-autocenter);
+  background-color: var(--color-main);
+  border: 0.15rem dashed var(--color-border);
+  color: var(--color-text-primary);
+  margin: 0 auto;
+  font-family: var(--font-primary);
+  font-weight: 400;
+  display: var(--display-flex);
+  flex-direction: column;
 }
 
 /*---MAIN---*/
@@ -17,15 +23,36 @@ li {
   text-align: var(--textalign-center);
 }
 
+h1 {
+  font-size: var(--size-h1);
+}
+
+h2 {
+  font-size: var(--size-h2);
+}
+
+h3 {
+  font-size: var(--size-h3);
+}
+
 main {
-  border: 1px solid green;
   width: 390px;
+  flex: 1;
+}
+
+header {
+  background-color: var(--color-card-bg);
+  border-bottom: 0.15rem dashed var(--color-border);
+  position: sticky;
+  top: 0;
+  padding: 1rem 0;
 }
 
 /*---CARD---*/
 
 .card {
-  border: 1px solid purple;
+  border: 0.15rem dashed var(--color-border);
+  background-color: var(--color-card-bg);
   display: var(--display-flex);
   flex-direction: column;
   justify-content: center;
@@ -33,18 +60,63 @@ main {
   margin: 2rem var(--margin-autocenter);
 }
 
-.bookmark {
+.bookmark-container {
   display: var(--display-flex);
   justify-content: flex-end;
-  background-color: aqua;
+  align-items: center;
+  width: 100%;
+}
+
+button.bookmark {
+  cursor: pointer;
+}
+
+.bookmark {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  border-style: none;
+  margin: 0.25rem;
+  width: 3rem;
+  height: 3rem;
+  transition: background-image 0.12s ease;
+}
+
+.bookmark-unsaved {
+  background-image: url("/mobile-quiz/assets/heart-unselect.png");
+}
+
+.bookmark-saved {
+  background-image: url("/mobile-quiz/assets/heart-unselect2.png");
+}
+
+.bookmark:hover {
+  background-image: url("/mobile-quiz/assets/heart-main.png");
+}
+
+.bookmark img {
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+}
+
+.question {
+  margin: 0 1.5rem 1.5rem;
 }
 
 /*---SHOW/HIDE BUTTON---*/
 
 .btn {
-  border: 1px dashed black;
+  border: 0.15rem dashed var(--color-text-secondary);
   padding: 0.75rem 4.5rem;
   margin: 0 var(--margin-autocenter);
+}
+
+.btn:hover {
+  border-color: var(--color-primary-accent);
+  color: var(--color-primary-accent);
+  cursor: pointer;
 }
 
 .toggle-btn {
@@ -55,6 +127,7 @@ main {
 
 .answer {
   display: none;
+  margin-bottom: 1rem;
 }
 .hide-text {
   display: none;
@@ -86,29 +159,49 @@ main {
 }
 
 .tags li {
-  border: 1px dashed black;
+  border: 1px dashed var(--color-text-secondary);
   font-size: 0.75rem;
   padding: 0.5rem 0.75rem;
-  background-color: chartreuse;
-  margin: 0 0.1rem;
+  background-color: var(--color-card-bg);
+  margin: 0 0.15rem;
+}
+
+.tags li:hover {
+  border-color: var(--color-secondary-accent);
+  color: var(--color-secondary-accent);
+  cursor: pointer;
 }
 
 /*---FOOTER---*/
 footer {
+  background-color: var(--color-card-bg);
   display: var(--display-flex);
-  border: 1px solid orange;
-  position: fixed;
-  width: 390px;
+  position: sticky;
+  width: 100%;
+  border-top: 0.15rem dashed var(--color-border);
 }
 
 footer ul {
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: aqua;
+  cursor: pointer;
+}
+
+footer ul li img {
+  width: 30%;
 }
 
 footer ul li {
-  border: 1px solid black;
+  padding: 1rem 0;
+  border: 0.15rem dashed var(--color-card-bg);
+}
+
+footer ul li.current {
+  border-color: var(--color-text-secondary);
+}
+
+footer ul li:hover {
+  border: 0.15rem dashed var(--color-primary-accent);
 }
