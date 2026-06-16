@@ -2,9 +2,12 @@
   --font-primary: "Pixelify Sans", sans-serif;
 
   --display-flex: flex;
+  --display-none: none;
   --textalign-center: center;
   --margin-autocenter: auto;
+  --cursor-pointer: pointer;
 
+  
   /*--FONT-SIZE--*/
 
   --size-h1: 1.75rem;
