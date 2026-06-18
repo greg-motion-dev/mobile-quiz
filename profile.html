@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
       rel="stylesheet"
     />
+    <script src="darkmode.js" defer ></script>
   </head>
   <body>
     <header>
@@ -70,10 +71,10 @@
       <section aria-labelledby="settings-heading">
         <div class="profile-settings">
           <h3 id="settings-heading">Settings</h3>
-          <div class="dark-mode">
+          <div class="dark-mode-toggle">
             <h4 id="dark-mode-label">Dark Mode</h4>
             <label class="switch">
-              <input type="checkbox" aria-labelledby="dark-mode-label" />
+              <input type="checkbox" onChange={darkmode} id="dark-mode-toggle" aria-labelledby="dark-mode-label" />
               <span class="slider"></span>
             </label>
           </div>
@@ -83,24 +84,24 @@
     <footer>
       <nav aria-label="Main navigation">
         <ul class="footer">
-          <a href="index.html">
             <li>
+               <a href="index.html">
                 <img src="/mobile-quiz/assets/gambling.png" alt="Start quiz" />
+               </a>
               </li>
-            </a>
-            <a href="bookmark.html">
-              <li>
-                <img src="/mobile-quiz/assets/heart-main.png" alt="Favorites" /> 
-              </li>
-            </a>
-            <a href="profile.html" aria-current="page"></a>
-              <li class="current">
+            <li>
+                <a href="bookmark.html">
+                  <img src="/mobile-quiz/assets/heart-main.png" alt="Favorites" /> 
+                </a>
+            </li>
+            <li class="current">
+              <a href="profile.html" aria-current="page">
                 <img
                   src="/mobile-quiz/assets/dancing.png"
                   alt="Profile (Current page)"
                 />
+              </a>
             </li>
-            </a>
         </ul>
       </nav>
     </footer>

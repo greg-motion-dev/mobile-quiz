@@ -2,7 +2,7 @@
 @import "/mobile-quiz/profile.css";
 
 body {
-  min-height: 50vh;
+  min-height: 100vh;
   max-width: 390px;
   background-color: var(--color-main);
   border: 0.15rem dashed var(--color-border);
@@ -68,7 +68,7 @@ header {
 }
 
 button.bookmark {
-  cursor: pointer;
+  cursor: var(--cursor-pointer);
 }
 
 .bookmark {
@@ -106,6 +106,7 @@ button.bookmark {
 }
 
 /*---SHOW/HIDE BUTTON---*/
+
 .btn {
   border: 0.15rem dashed var(--color-text-secondary);
   padding: 0.75rem 4.5rem;
@@ -175,12 +176,21 @@ button.bookmark {
 }
 
 /*---FOOTER---*/
+
 footer {
   background-color: var(--color-card-bg);
   display: var(--display-flex);
-  position: sticky;
+  position: fixed;
+  max-width: 390px;
   width: 100%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   border-top: 0.15rem dashed var(--color-border);
+}
+
+footer nav {
+  width: 100%;
 }
 
 footer ul {
@@ -191,12 +201,20 @@ footer ul {
   cursor: var(--cursor-pointer);
 }
 
+footer ul li a {
+  display: var(--display-flex);
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+  height: 100%;
+  width: 100%;
+}
+
 footer ul li img {
   width: 30%;
 }
 
 footer ul li {
-  padding: 1rem 0;
   border: 0.15rem dashed var(--color-card-bg);
 }
 

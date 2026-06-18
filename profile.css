@@ -11,7 +11,7 @@ section {
   display: var(--display-flex);
   justify-content: space-around;
   align-items: center;
-  margin: 2rem auto 0;
+  margin: 2rem var(--margin-autocenter) 0;
 }
 
 .profile-pic {
@@ -30,8 +30,8 @@ section {
 .profile-about {
   display: var(--display-flex);
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: var(--flex-start);
+  justify-content: var(--flex-start);
   margin: 1rem 0 2rem;
 }
 
@@ -67,12 +67,12 @@ section {
 .profile-settings {
   display: var(--display-flex);
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: var(--flex-start);
+  justify-content: var(--flex-start);
   margin-bottom: 3rem;
 }
 
-.dark-mode {
+.dark-mode-toggle {
   display: var(--display-flex);
   flex-direction: row;
   justify-content: space-between;
@@ -131,7 +131,7 @@ input:checked + .slider {
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
+  box-shadow: 0 0 1px var(--color-border);
 }
 
 input:checked + .slider:before {

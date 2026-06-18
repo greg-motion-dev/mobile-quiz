@@ -109,29 +109,89 @@
           </ul>
         </div>
       </section>
+      <section class="card" aria-label="Question 4">
+        <div class="bookmark-container">
+          <button
+            type="button"
+            class="bookmark bookmark-unsaved"
+            aria-label="Add to bookmarks"
+          ></button>
+        </div>
+        <div class="question">
+          <h2>
+            Who created the original Tetris game in 1984?
+          </h2>
+        </div>
+        <div>
+          <input type="checkbox" id="toggle-4" class="toggle-input" />
+          <label for="toggle-4" class="toggle-btn">
+            <h3 class="answer">Alexey Pajitnov</h3>
+            <span class="btn show-text">Show Answer</span>
+            <span class="btn hide-text">Hide Answer</span>
+          </label>
+        </div>
+        <div>
+          <ul class="tags" aria-label="Tags">
+            <li>Tetris</li>
+            <li>Puzzle</li>
+            <li>Arcade</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card" aria-label="Question 5">
+        <div class="bookmark-container">
+          <button
+            type="button"
+            class="bookmark bookmark-unsaved"
+            aria-label="Add to bookmarks"
+          ></button>
+        </div>
+        <div class="question">
+          <h2>
+             In Space Invaders (1978), how many aliens appear on screen
+             at the start of each level?
+          </h2>
+        </div>
+        <div>
+          <input type="checkbox" id="toggle-5" class="toggle-input" />
+          <label for="toggle-5" class="toggle-btn">
+            <h3 class="answer">55 aliens (5 rows of 11)</h3>
+            <span class="btn show-text">Show Answer</span>
+            <span class="btn hide-text">Hide Answer</span>
+          </label>
+        </div>
+        <div>
+          <ul class="tags" aria-label="Tags">
+            <li>Space Invaders</li>
+            <li>Taito</li>
+            <li>Arcade</li>
+          </ul>
+        </div>
+      </section>
     </main>
 
     <footer>
-      <nav aria-label="Main navigation">
+     <nav aria-label="Main navigation">
         <ul class="footer">
-          <a href="index.html">
-            <li>
+            <li class="current">
+               <a href="index.html">
                 <img src="/mobile-quiz/assets/gambling.png" alt="Start quiz" />
+               </a>
               </li>
-            </a>
-            <a href="bookmark.html">
-              <li>
-                <img src="/mobile-quiz/assets/heart-main.png" alt="Favorites" /> 
-              </li>
-            </a>
-            <a href="profile.html" aria-current="page"></a>
-              <li class="current">
+            <li>
+                <a href="bookmark.html">
+                  <img src="/mobile-quiz/assets/heart-main.png" alt="Favorites" /> 
+                </a>
+            </li>
+            <li>
+              <a href="profile.html" aria-current="page">
                 <img
                   src="/mobile-quiz/assets/dancing.png"
                   alt="Profile (Current page)"
                 />
+              </a>
             </li>
-            </a>
         </ul>
       </nav>
     </footer>
