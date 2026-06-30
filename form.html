@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retro Video Game Quiz | Submit Questions</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="scripts/form.js" defer></script>
+    <script src="scripts/characters.js" defer></script>
+  </head>
+  <body>
+    <header><h1>Submit Questions</h1></header>
+
+    <main>
+      <section class="form" aria-label="Submit Questions Form">
+       <form data-js="form">
+        <fieldset>
+            <legend>Submit Questions Form</legend>
+                <label for="user-question">Your Question</label>
+                <textarea
+                    name="userQuestion"
+                    maxlength="150"
+                    id="user-question"
+                    rows="10"
+                >
+                </textarea>
+                <span data-js="characters-left-questions">You have x characters left</span>
+                <label for="user-answer">Your Answer</label>
+                <textarea
+                    name="userAnswer"
+                    id="user-answer"
+                    maxlength="150"
+                >
+                </textarea>
+                <span data-js="characters-left-answers">You have x characters left</span>
+
+                 <label for="user-tag">Add Tag</label>
+                <input
+                    type="text"
+                    name="userTag"
+                    id="user-tag"
+                >
+                
+                <button type="submit" class="btn">Submit</button>
+        </fieldset>
+       </form>
+      </section>
+     
+    </main>
+
+    <footer>
+     <nav aria-label="Main navigation">
+        <ul class="footer">
+            <li>
+               <a href="index.html">
+                <img src="./assets/gambling.png" alt="Start quiz" />
+               </a>
+              </li>
+            <li>
+                <a href="bookmark.html">
+                  <img src="./assets/heart-main.png" alt="Favorites" /> 
+                </a>
+            </li>
+             <li class="current">
+                <a href="form.html">
+                  <img src="./assets/mail.png" alt="Form" /> 
+                </a>
+            </li>
+            <li>
+              <a href="profile.html" aria-current="page">
+                <img
+                  src="./assets/dancing.png"
+                  alt="Profile (Current page)"
+                />
+              </a>
+            </li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>

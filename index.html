@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Retro Video Game Quiz</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
       rel="stylesheet"
     />
+    <script src="scripts/script.js" defer></script>
   </head>
   <body>
     <header><h1>Retro Video Game Quiz</h1></header>
@@ -20,8 +21,9 @@
         <div class="bookmark-container">
           <button
             type="button"
-            class="bookmark bookmark-unsaved"
+            class="bookmark"
             aria-label="Add to bookmarks"
+            data-js="bookmark-heart"
           ></button>
         </div>
         <div class="question">
@@ -31,12 +33,9 @@
           </h2>
         </div>
         <div>
-          <input type="checkbox" id="toggle-1" class="toggle-input" />
-          <label for="toggle-1" class="toggle-btn">
-            <h3 class="answer">8 characters</h3>
-            <span class="btn show-text">Show Answer</span>
-            <span class="btn hide-text">Hide Answer</span>
-          </label>
+          <h3 class="answer" data-js="answer">8 characters</h3>
+            <button type="button" class="btn toggle-btn" data-js="btn-answer">
+            Show Answer</button>
         </div>
         <div>
           <ul class="tags" aria-label="Tags">
@@ -51,7 +50,7 @@
         <div class="bookmark-container">
           <button
             type="button"
-            class="bookmark bookmark-unsaved"
+            class="bookmark"
             aria-label="Add to bookmarks"
           ></button>
         </div>
@@ -62,14 +61,10 @@
           </h2>
         </div>
         <div>
-          <input type="checkbox" id="toggle-2" class="toggle-input" />
-          <label for="toggle-2" class="toggle-btn">
-            <h3 class="answer">1986</h3>
-            <span class="btn show-text">Show Answer</span>
-            <span class="btn hide-text">Hide Answer</span>
-          </label>
+          <h3 class="answer" data-js="answer">1986</h3>
+            <button type="button" class="btn toggle-btn" data-js="btn-answer">
+            Show Answer</button>
         </div>
-
         <div>
           <ul class="tags" aria-label="Tags">
             <li>The Legend of Zelda</li>
@@ -78,12 +73,11 @@
           </ul>
         </div>
       </section>
-
       <section class="card" aria-label="Question 3">
         <div class="bookmark-container">
           <button
             type="button"
-            class="bookmark bookmark-unsaved"
+            class="bookmark"
             aria-label="Add to bookmarks"
           ></button>
         </div>
@@ -94,12 +88,9 @@
           </h2>
         </div>
         <div>
-          <input type="checkbox" id="toggle-3" class="toggle-input" />
-          <label for="toggle-3" class="toggle-btn">
-            <h3 class="answer">8 fruit types</h3>
-            <span class="btn show-text">Show Answer</span>
-            <span class="btn hide-text">Hide Answer</span>
-          </label>
+          <h3 class="answer" data-js="answer">8 fruit types</h3>
+            <button type="button" class="btn toggle-btn" data-js="btn-answer">
+            Show Answer</button>
         </div>
         <div>
           <ul class="tags" aria-label="Tags">
@@ -109,29 +100,88 @@
           </ul>
         </div>
       </section>
+      <section class="card" aria-label="Question 4">
+        <div class="bookmark-container">
+          <button
+            type="button"
+            class="bookmark"
+            aria-label="Add to bookmarks"
+          ></button>
+        </div>
+        <div class="question">
+          <h2>
+            Who created the original Tetris game in 1984?
+          </h2>
+        </div>
+        <div>
+          <h3 class="answer" data-js="answer">Alexey Pajitnov</h3>
+            <button type="button" class="btn toggle-btn" data-js="btn-answer">
+            Show Answer</button>
+        </div>
+        <div>
+          <ul class="tags" aria-label="Tags">
+            <li>Tetris</li>
+            <li>Puzzle</li>
+            <li>Arcade</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card" aria-label="Question 5">
+        <div class="bookmark-container">
+          <button
+            type="button"
+            class="bookmark"
+            aria-label="Add to bookmarks"
+          ></button>
+        </div>
+        <div class="question">
+          <h2>
+             In Space Invaders (1978), how many aliens appear on screen
+             at the start of each level?
+          </h2>
+        </div>
+        <div>
+          <h3 class="answer" data-js="answer">55 aliens (5 rows of 11)</h3>
+            <button type="button" class="btn toggle-btn" data-js="btn-answer">
+            Show Answer</button>
+        </div>
+        <div>
+          <ul class="tags" aria-label="Tags">
+            <li>Space Invaders</li>
+            <li>Taito</li>
+            <li>Arcade</li>
+          </ul>
+        </div>
+      </section>
     </main>
 
     <footer>
-      <nav aria-label="Main navigation">
+     <nav aria-label="Main navigation">
         <ul class="footer">
-          <li class="current">
-            <a href="index.html" aria-current="page">
-              <img
-                src="/mobile-quiz/assets/gambling.png"
-                alt="Quiz (Current page)"
-              />
-            </a>
-          </li>
-          <li>
-            <a href="bookmark.html">
-              <img src="/mobile-quiz/assets/heart-main.png" alt="Favorites" />
-            </a>
-          </li>
-          <li>
-            <a href="profile.html">
-              <img src="/mobile-quiz/assets/dancing.png" alt="Profile" />
-            </a>
-          </li>
+            <li class="current">
+               <a href="index.html">
+                <img src="./assets/gambling.png" alt="Start quiz" />
+               </a>
+              </li>
+            <li>
+                <a href="bookmark.html">
+                  <img src="./assets/heart-main.png" alt="Favorites" /> 
+                </a>
+            </li>
+            <li>
+                <a href="form.html">
+                  <img src="./assets/mail.png" alt="Form" /> 
+                </a>
+            </li>
+            <li>
+              <a href="profile.html" aria-current="page">
+                <img
+                  src="./assets/dancing.png"
+                  alt="Profile (Current page)"
+                />
+              </a>
+            </li>
         </ul>
       </nav>
     </footer>
