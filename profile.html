@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Retro Video Game Quiz | Profile</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="profile.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/profile.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
       rel="stylesheet"
     />
-    <script src="darkmode.js" defer ></script>
+    <script src="scripts/darkmode.js" defer ></script>
   </head>
   <body>
     <header>
@@ -53,14 +53,14 @@
         <div class="profile-counters">
           <span class="profile-counters-container">
             <img
-              src="/mobile-quiz/assets/question.png"
+              src="assets/question.png"
               alt="Answered questions:"
             />
             <span>12</span>
           </span>
           <span class="profile-counters-container">
             <img
-              src="/mobile-quiz/assets/heart-unselect2.png"
+              src="assets/heart-unselect2.png"
               alt="Saved favorites:"
             />
             <span>4</span>
@@ -71,10 +71,10 @@
       <section aria-labelledby="settings-heading">
         <div class="profile-settings">
           <h3 id="settings-heading">Settings</h3>
-          <div class="dark-mode-toggle">
-            <h4 id="dark-mode-label">Dark Mode</h4>
+          <div class="light-mode-toggle">
+            <h4 id="light-mode-label">Dark Mode</h4>
             <label class="switch">
-              <input type="checkbox" onChange={darkmode} id="dark-mode-toggle" aria-labelledby="dark-mode-label" />
+              <input type="checkbox" onChange={darkmode} id="light-mode-toggle" aria-labelledby="light-mode-label" />
               <span class="slider"></span>
             </label>
           </div>
@@ -86,18 +86,23 @@
         <ul class="footer">
             <li>
                <a href="index.html">
-                <img src="/mobile-quiz/assets/gambling.png" alt="Start quiz" />
+                <img src="./assets/gambling.png" alt="Start quiz" />
                </a>
               </li>
             <li>
                 <a href="bookmark.html">
-                  <img src="/mobile-quiz/assets/heart-main.png" alt="Favorites" /> 
+                  <img src="./assets/heart-main.png" alt="Favorites" /> 
+                </a>
+            </li>
+            <li>
+                <a href="form.html">
+                  <img src="./assets/mail.png" alt="Form" /> 
                 </a>
             </li>
             <li class="current">
               <a href="profile.html" aria-current="page">
                 <img
-                  src="/mobile-quiz/assets/dancing.png"
+                  src="./assets/dancing.png"
                   alt="Profile (Current page)"
                 />
               </a>

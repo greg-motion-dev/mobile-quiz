@@ -17,20 +17,7 @@
 
   /*---COLORS---*/
 
-  /*---LIGHT MODE---*/
-  
-  --color-main: #f0ece2;
-    --color-card-bg: #fffdf5;
-    --color-primary-accent: #007a40;
-    --color-secondary-accent: #c0004a;
-    --color-text-primary: #1a1a2e;
-    --color-text-secondary: #555577;
-    --color-border: #c8c4b0;
-}
-
-/*---DARK MODE---*/
-
-.dark-mode {
+  /*---DARK MODE---*/
   --color-main: #0f0f1a;
   --color-card-bg: #1a1a2e;
   --color-primary-accent: #00ff88;
@@ -38,6 +25,19 @@
   --color-text-primary: #e0e0ff;
   --color-text-secondary: #8888aa;
   --color-border: #3a3a5c;
+ 
+}
+
+/*---LIGHT MODE---*/
+
+.light-mode {
+   --color-main: #f0ece2;
+    --color-card-bg: #fffdf5;
+    --color-primary-accent: #007a40;
+    --color-secondary-accent: #c0004a;
+    --color-text-primary: #1a1a2e;
+    --color-text-secondary: #555577;
+    --color-border: #c8c4b0;
 }
 
 * {
