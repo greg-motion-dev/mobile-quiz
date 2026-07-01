@@ -1,21 +1,21 @@
 const questionCharacters = document.querySelector('#user-question');
-const answersCharacters = document.querySelector('#user-answer');
+const answerCharacters = document.querySelector('#user-answer');
 const leftCharactersQuestions = document.querySelector('[data-js="characters-left-questions"]')
 const leftCharactersAnswers = document.querySelector('[data-js="characters-left-answers"]')
 
 
-questionCharacters.addEventListener("input", (event)=>{
-   const currentLength = event.target.value.length;
-   const maxLength = event.target.maxLength;
+function updateCharacterCount(inputElement, leftCharacters){
+    const currentLength = inputElement.value.length;
+   const maxLength = inputElement.maxLength;
    const remainingLength = maxLength - currentLength;
-   leftCharactersAnswers.textContent = remainingLength;
+   leftCharacters.textContent = remainingLength;
+}
+
+
+questionCharacters.addEventListener("input", (event)=>{
+    updateCharacterCount(questionCharacters, leftCharactersQuestions);
 })
 
-
-// function updateCharacterCount(inputElement, Displayelement){
-//     // 1. Read the max length from the inputElement
-//     questionCharacters
-//   // 2. Read the current length from the inputElement
-//   // 3. Do the math
-//   // 4. Update the textContent of the displayElement
-// }
+answerCharacters.addEventListener("input", (event)=>{
+    updateCharacterCount(answerCharacters, leftCharactersAnswers);
+})

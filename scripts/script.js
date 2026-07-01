@@ -4,10 +4,7 @@ const answer = document.querySelector('[data-js="answer"]');
 
 bookmarkHeart.addEventListener("click", ()=>{
         bookmarkHeart.classList.toggle("bookmark-saved");
-        // bookmarkHeart.classList.add("bookmark-unsaved");
-        // // bookmarkHeart.classList.
 })
-
 
 btnAnswer.addEventListener("click", ()=>{
         answer.classList.toggle("reveal");
