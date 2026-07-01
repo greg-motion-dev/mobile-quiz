@@ -1,18 +1,17 @@
  const themeToggle = document.getElementById("light-mode-toggle");
- const lightdarkmode = document.querySelector('[data-js="light-dark-mode"]');
+ const darkLightModeSwitch = document.querySelector('[data-js="dark-light-switch"]'); 
  
-
     themeToggle.addEventListener("change", (event)=>{
 
      const isEnabled = event.target.checked;
         if (isEnabled) {
      console.log("Lightmode is enabled")
      document.body.classList.add("light-mode");
-     lightdarkmode.textContent = "Dark Mode";
+     darkLightModeSwitch.textContent = "Dark Mode";
 
     } else { 
      console.log("Lightmode is disabled");
         document.body.classList.remove("light-mode");
-        lightdarkmode.textContent = "Light Mode";
+        darkLightModeSwitch.textContent = "Light Mode";
     }
 });    
