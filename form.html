@@ -13,6 +13,7 @@
     />
     <script src="scripts/form.js" defer></script>
     <script src="scripts/characters.js" defer></script>
+    <script src="scripts/formNewCard.js" defer></script>
   </head>
   <body>
     <header><h1>Submit Questions</h1></header>
@@ -28,17 +29,15 @@
                     maxlength="150"
                     id="user-question"
                     rows="10"
-                >
-                </textarea>
-                <span data-js="characters-left-questions">You have x characters left</span>
+                ></textarea>
+                <span><span data-js="characters-left-questions">150</span> characters left</span>
                 <label for="user-answer">Your Answer</label>
                 <textarea
                     name="userAnswer"
                     id="user-answer"
                     maxlength="150"
-                >
-                </textarea>
-                <span data-js="characters-left-answers">You have x characters left</span>
+                ></textarea>
+                <span><span data-js="characters-left-answers">150</span> characters left</span>
 
                  <label for="user-tag">Add Tag</label>
                 <input
@@ -46,7 +45,6 @@
                     name="userTag"
                     id="user-tag"
                 >
-                
                 <button type="submit" class="btn">Submit</button>
         </fieldset>
        </form>

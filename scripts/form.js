@@ -18,9 +18,7 @@ form.addEventListener("submit", (event) => {
     console.log(submittedUserAnswer);
        console.log(submittedUserTag);
 
-
-
-
+//paste new card with submitted values
   const newQuestion = document.createElement('section');
   newQuestion.classList.add('card');
   newQuestion.innerHTML = `
@@ -29,7 +27,7 @@ form.addEventListener("submit", (event) => {
             type="button"
             class="bookmark bookmark-saved"
             aria-label="Remove bookmark"
-            data-js="bookmark-heart"
+            data-js="bookmark-heart-new"
           ></button>
         </div>
         <div class="question">
@@ -38,13 +36,11 @@ form.addEventListener("submit", (event) => {
           </h2>
         </div>
         <div>
-          <h3 class="answer" data-js="answer">${submittedUserAnswer}</h3>
-            <button type="button" class="btn toggle-btn" data-js="btn-answer">Show Answer</button>
+          <h3 class="answer" data-js="answer-new">${submittedUserAnswer}</h3>
+            <button type="button" class="btn toggle-btn" data-js="btn-answer-new">Show Answer</button>
         </div>
         <div>
           <ul class="tags" aria-label="Tags">
-            <li>${submittedUserTag}</li>
-            <li>${submittedUserTag}</li>
             <li>${submittedUserTag}</li>
           </ul>
         </div>`
@@ -52,9 +48,27 @@ form.addEventListener("submit", (event) => {
 
         //append below form
     form.append(newQuestion);
-  
+
+    //define variables
+    const bookmarkHeartNew = document.querySelector('[data-js="bookmark-heart-new"]');
+    const btnAnswerNew = document.querySelector('[data-js="btn-answer-new"]');
+    const answerNew = document.querySelector('[data-js="answer-new"]');
+
+    // create heart-toggle
+    bookmarkHeartNew.addEventListener("click", ()=>{
+          bookmarkHeartNew.classList.toggle("bookmark-saved");
+    })
+
+    //create show button reveal
+    btnAnswerNew.addEventListener("click", ()=>{
+          answerNew.classList.toggle("reveal");
+          if ( answerNew.classList.contains("reveal")){
+            btnAnswerNew.textContent = "Hide Answer";
+          } else { btnAnswerNew.textContent = "Show Answer"}
+    })
+
 });
 
 
-       
-    
+
+
